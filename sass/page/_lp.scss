@@ -1,0 +1,131 @@
+.lp {
+    h3{
+        color:$color-purple;
+        font-size: 1.35em;
+    }
+    table {
+        margin-bottom: 2em;
+
+        td {
+            a {
+                @include aSetting_nocolor;
+                color:$aColor;
+                &:hover, &:focus{
+                   color:$aHover;
+               }
+           }
+           &.date {
+            text-align: center;
+            @include screen('mobile') {
+                text-align: left;
+            }
+        }
+        &.num, &.year, &.echelon, &.sort {
+            text-align: center;
+            @include screen('mobile') {
+                text-align: left;
+            }
+        }
+    }
+}
+.table_list{
+    .file{
+        img{
+            width: 26px;
+            height: 28px;
+            vertical-align: middle;
+        }
+    }
+}
+.list {
+    &>ul, ol {
+        list-style-type: none;
+        padding: 0;
+        border-top: 2px solid $primaryColor;
+        margin-bottom: 2em;
+
+        &>li {
+            padding:.5em .3em .4em;
+            border-bottom: 1px solid $color-gray;
+            position: relative;
+            &:after{
+                content: "";
+                position: absolute;
+                bottom:-2px;
+                left:0;
+                width: 6.3em;
+                height: 3px;
+                background-color:$color-purple;
+            }
+            .tag {
+                margin-left: 2em;
+            }
+            &>a {
+                display: block;
+                position: relative;
+                line-height: 1.45em;
+                color: $aColor;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                &:hover, &:focus
+                {
+                    color: $aHover;
+                }
+                .num {
+                    width: 1.5em;
+                    text-align: right;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    &:after {
+                        content: ".";
+                        display: inline-block;
+                    }
+                }
+            }
+            span.dept {
+                display: inline-block;
+                font-size: .938em;
+                @include screen("mobile") {
+                    display: block;
+                }
+            }
+            time {
+                display: inline-block;
+                font-weight: bold;
+                color: #4141af;
+                padding:.5em 1em .5em 0;
+            }
+
+        }
+    }
+}
+}
+.album {
+    margin: 1em auto;
+    ul {
+        @include li-reset;
+        display:flex;
+        flex-direction:row;
+        justify-content:flex-start;
+        align-items:stretch;
+        flex-wrap:wrap;
+        li{
+            flex:0 0 30%;
+            margin:0 1.66% 3%;
+            display:flex;
+            flex-direction:row;
+            align-content: stretch;
+            @include screen('tablet'){
+                flex:0 0 46%;
+                margin:0 2% 3%;
+            }
+            @include screen('mobile'){
+                flex:0 0 96%;
+                margin:0 3% 5%;
+            }
+            
+        }
+    }
+}

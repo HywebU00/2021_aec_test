@@ -1,0 +1,55 @@
+.important-data{
+	clear: both;
+	background: #d5d5ef;
+	margin:1em 0;
+	padding: 0 0 1em 0;
+	line-height: 1.8em;
+	ol{
+		@include li-reset;
+		margin: 1em 3em;
+		@include screen('mobile') {
+			margin: 1em;
+		}
+		li{
+			img{
+				vertical-align: middle;
+			}
+		}
+	}
+	h2{
+		background: #a9a8ea;
+		margin: 0;
+		padding: .5em;
+		text-align: center;
+		font-size: 1.25em;
+	}
+	p{
+		margin: 1em 3em;
+		@include screen('mobile') {
+			margin: 1em;
+		}
+	}
+}
+.exam_q{
+	color:$color-purple;
+	border: solid 2px $color-purple;
+	padding: 0 15px 0 60px;
+	float: right;
+	position: relative;
+	height: 38px;
+	margin-bottom: 1em;
+	line-height: 2em;
+	&:before{
+		content:'';
+		width: 44px;
+		height: 36px;
+		background: #6c6ce4 url('../images/icon_q.png')no-repeat center center;
+		position: absolute;
+		left:0;
+		top:0;
+	}
+	&:hover, &:focus{
+		background: #e9f6e0;
+		color:darken($aColor, 10);
+	}
+}

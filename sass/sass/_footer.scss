@@ -1,0 +1,133 @@
+footer {
+    box-sizing: border-box;
+    @include clearfix;
+    text-align: left;
+    font-size: 0.813em;
+    padding: 0;
+    background: $fatfooterBgColor;
+    @include screen('mobile') {
+        margin: -1.2em 0 0;
+        padding: 1em 0 0 0;
+    }
+
+    .container {
+        @include gutter;
+        >div {
+            padding-bottom: 1em;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        @include screen('tablet') {
+            flex-wrap:wrap;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $primaryColor;
+        &:hover,
+        &:focus {
+            color: darken($primaryColor, 10);
+        }
+    }
+    .footer_logo {
+        flex:0 1 60px;
+        @include screen('mobile') {
+
+        }
+
+    }
+    .footer_info {
+        flex:0 1 auto;
+        @include screen('mobile') {
+
+        }
+    }
+    .footer_icon {
+        flex:0 1 200px;
+        @include screen('tablet') {
+         flex:1 1 100%; 
+         text-align: right;
+     }
+ }
+    // 版權連結
+    .footer_link {
+        @include li-reset();
+        @include clearfix();
+        display: flex;
+        background: #5555c7;
+        justify-content: center;
+        align-items: center; 
+        @include screen('mobile') {
+            flex-direction: column;
+        }
+        li {
+            flex:0 1 auto;
+            margin: 0px;
+            @include screen('mobile') {
+               flex:1 1 100%; 
+           }
+           a {
+            display: block;
+            padding: .5em 1em;
+            color: #c4b1e6;
+            text-align: center;
+            transition: all .3s ease-out;
+            &:hover,
+            &:focus {
+                color:#fff;
+            }
+        }
+    }
+
+}
+p {
+    line-height: 1.65em;
+    margin: 1em 0;
+    padding:0 2em;
+    display: inline-block;
+    border-right: solid 1px #fff;
+    color:#fff;
+    &:last-child{
+       border: none; 
+   }
+   @include screen('mobile') {
+    border: none;
+    padding:0 0 1em;
+    margin: 0 30px;
+}
+}
+
+.update,
+.counter {
+    display: inline-block;
+    margin-right: 5px;
+    em {
+        font-style: normal;
+        color: $primaryColor;
+        padding: 0 .5em;
+    }
+}
+.footer_icon {
+    a {
+        display: inline-block;
+        vertical-align: top;
+        position:relative;
+        &:focus {
+            &:after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                box-shadow: 0px 0px 0px 1px $aHover inset;
+                z-index: 99;
+            }
+        }
+    }
+    img {
+        max-width: 120px;
+    }
+}
+}
