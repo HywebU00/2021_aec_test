@@ -13,7 +13,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        border-bottom: solid 1px #fff;
+        // border-bottom: solid 1px #fff;
         @include screen('mobile') {
             display: none;
         }
