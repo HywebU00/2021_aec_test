@@ -12,7 +12,7 @@ $btn-radius:.2em;
 // 按鈕的共用設定
 @mixin btn_setting($btn-bg:#eee, $btn-font-color:$btn-font-color) {
     background: $btn-bg;
-    border: 1px solid $btn-bg;
+    border: 1px solid #ccc;
     color: $btn-font-color;
     // text-shadow:1px 1px 1px RGBA(0,0,0,.3);
     // border-radius: $btn-radius;
@@ -178,4 +178,21 @@ $btn-radius:.2em;
 }
 .btn-xs {
     font-size: $font-size * .75; //12px
+}
+
+.btn-account-check{
+    background: $primaryColor!important;
+    color: #fff !important;
+    border: solid 1px $primaryColor!important;
+    padding: .6em 1em;
+    border-radius: 3px;
+    line-height: 1em;
+    margin-top: -.2em;
+
+    &:hover,
+    &:focus {
+        background: darken($primaryColor, 10)!important;
+        border: solid 1px $primaryColor!important;
+
+    }
 }

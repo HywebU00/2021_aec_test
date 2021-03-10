@@ -86,10 +86,10 @@ select::-ms-expand {
     .form_title {
         max-width: $form_title_width;
         flex: 0 0 $form_title_width;
-        // align-self: flex-start;
-        align-self: center;
+        align-self: flex-start;
+        // align-self: center;
         @include gutter();
-        padding-top: 5px;
+        padding-top: .6em;
         //white-space: nowrap;
 
         @include screen('mobile') {
@@ -748,9 +748,10 @@ select::-ms-expand {
 
         .help {
             font-size: .938em;
-            color: #888;
+            color: #555;
             padding: 0 .5em;
         }
+
 
         // 第二層的設定
         .form_grp {
@@ -785,6 +786,7 @@ select::-ms-expand {
                             display: block;
                         }
                     }
+
                 }
 
 
@@ -799,152 +801,9 @@ select::-ms-expand {
 
         }
 
-        // 電話專屬
-        .tel {
 
-            input[type="text"]:first-child,
-            input[type="tel"]:first-child {
-                background: url(../images/icon/icon_add.svg) no-repeat .5em center;
-                background-size: 12px;
-                padding-left: 1.5em;
-            }
 
-            input[type="text"]:first-child,
-            select:first-child,
-            input[type="tel"]:first-child {
-                width: 100px !important;
 
-                &~input {
-                    width: calc(100% - 200px);
-
-                    @include screen('xs_mobile') {
-                        width: 100% !important;
-                        display: block !important;
-                    }
-                }
-            }
-        }
-
-        // 生日專屬
-        .birthday {
-            select {
-                display: inline-block;
-                margin-right: .5em;
-                text-align-last: center;
-
-                @include screen('xs_mobile') {
-                    width: 88% !important;
-                    min-width: 88% !important;
-                    display: inline-block !important;
-                    text-align-last: left;
-                }
-
-                option {
-                    text-align: center;
-                }
-
-                // ~select {
-                //     margin-left: .2em;
-
-                //     // @include screen('xs_mobile') {
-                //     //     margin-left: 0;
-                //     // }
-                // }
-            }
-        }
-
-        // 地址專屬
-        .address {
-            select {
-                min-width: 100px;
-
-                option {
-                    text-align: center;
-                }
-
-                @include screen('xs_mobile') {
-                    width: 100px;
-                    display: inline-block !important;
-                }
-            }
-
-            input[type="text"] {
-                //width: calc(100% - 231px) !important;
-                flex: 1 1 auto;
-
-                @include screen('mobile') {
-                    display: block !important;
-                    width: calc(100% - .6em) !important;
-                }
-            }
-        }
-
-        // 日期專屬
-        .datepick {
-            position: relative;
-
-            @include screen('xs_mobile') {
-                width: 100%;
-                display: block;
-                padding-right: 0;
-            }
-
-            &+.datepick {
-                margin-left: .3em;
-                margin-right: 0;
-                padding-right: 0;
-
-                &:before {
-                    content: "~";
-                    font-size: 1.5em;
-                    color: #777;
-                }
-
-                @include screen('xs_mobile') {
-                    margin-left: 0em;
-
-                    //padding-right:.5em;
-                    &:before {
-                        display: none;
-                    }
-                }
-
-                // i {
-                //     right: .5em;
-                // }
-            }
-
-            i {
-                position: absolute;
-                padding: .37em .1em !important;
-                right: 1em;
-                top: .2em;
-                min-width: 1em;
-                background: none;
-                border: none;
-                width: auto;
-                pointer-events: none;
-
-                &:hover,
-                &:focus {
-                    box-shadow: none;
-                    border: none !important;
-                }
-            }
-
-            >input[type="text"],
-            >input[type="date"] {
-                width: 10em;
-
-                @include screen('xs_mobile') {
-                    width: calc(100% - .6em);
-                }
-            }
-
-            >input[type="text"] {
-                padding-right: 2em;
-            }
-        }
     }
 
     .btn_grp {
@@ -1382,15 +1241,15 @@ input[type="checkbox"]:focus {
 
     input[readonly],
     input[disable] {
-        background: transparent;
-        color: #666;
+        // background: transparent;
+        color: #333;
     }
 
     .upload_btn {
         position: absolute;
         overflow: hidden;
         top: 1px;
-        right: 3px;
+        right: 8px;
         @extend %btn;
         @include btn_setting($form-focus, #FFF);
         padding: .2em 1em !important;
@@ -1484,4 +1343,176 @@ abbr[title] {
             left: auto;
         }
     }
+}
+
+//modify
+// 電話專屬
+.tel {
+    input[type="text"]:first-child,
+    input[type="tel"]:first-child {
+        background: url(../images/icon/icon_add.svg) no-repeat .5em center;
+        background-size: 12px;
+        padding-left: 1.5em;
+    }
+
+    input[type="text"]:first-child,
+    select:first-child,
+    input[type="tel"]:first-child {
+        width: 100px !important;
+
+        &~input {
+            width: calc(100% - 200px);
+
+            @include screen('xs_mobile') {
+                width: 100% !important;
+                display: block !important;
+            }
+        }
+    }
+    width: auto;
+    min-width: 100px;
+    display: inline-block;
+
+}
+
+// 生日專屬
+.birthday {
+    select {
+        display: inline-block;
+        margin-right: .5em;
+        text-align-last: center;
+
+        @include screen('xs_mobile') {
+            width: 88% !important;
+            min-width: 88% !important;
+            display: inline-block !important;
+            text-align-last: left;
+        }
+
+        option {
+            text-align: center;
+        }
+
+                // ~select {
+                //     margin-left: .2em;
+
+                //     // @include screen('xs_mobile') {
+                //     //     margin-left: 0;
+                //     // }
+                // }
+            }
+        }
+
+// 地址專屬
+.address {
+    select {
+        min-width: 100px;
+
+        option {
+            text-align: center;
+        }
+
+        @include screen('xs_mobile') {
+            width: 100px;
+            display: inline-block !important;
+        }
+    }
+
+    input[type="text"] {
+                //width: calc(100% - 231px) !important;
+                flex: 1 1 auto;
+
+                @include screen('mobile') {
+                    display: block !important;
+                    width: calc(100% - .6em) !important;
+                }
+            }
+        }
+
+// 日期專屬
+.datepick {
+    position: relative;
+
+    @include screen('xs_mobile') {
+        width: 100%;
+        display: block;
+        padding-right: 0;
+    }
+
+    &+.datepick {
+        margin-left: .3em;
+        margin-right: 0;
+        padding-right: 0;
+
+        &:before {
+            content: "~";
+            font-size: 1.5em;
+            color: #777;
+        }
+
+        @include screen('xs_mobile') {
+            margin-left: 0em;
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    i {
+        position: absolute;
+        padding: .37em .1em !important;
+        right: 1em;
+        top: .2em;
+        min-width: 1em;
+        background: none;
+        border: none;
+        width: auto;
+        pointer-events: none;
+
+        &:hover,
+        &:focus {
+            box-shadow: none;
+            border: none !important;
+        }
+    }
+
+    >input[type="text"],
+    >input[type="date"] {
+        width: 10em;
+
+        @include screen('xs_mobile') {
+            width: calc(100% - .6em);
+        }
+    }
+
+    >input[type="text"] {
+        padding-right: 2em;
+    }
+}
+
+.requirement{
+    background: rgba(255, 255, 255, .8);
+    display: block;
+    padding: 1px 1em .5em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+
+    select{
+        width: auto;
+    }
+}
+.check_a{
+    margin-left: 2em;
+    label{
+        display: block;
+        align-items: start;
+        text-indent: -1.6em;
+        input[type="checkbox"]{
+            width: 1em;
+            height: 1em;
+            margin:.1em .3em!important;
+            vertical-align: top;
+        }
+    }
+
 }

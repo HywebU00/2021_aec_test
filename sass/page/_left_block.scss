@@ -57,29 +57,32 @@
 .leftblock_nodemenu {
     padding: 0 0 20px 0;
     h2 {
-        margin: 0 0 1em;
+        margin: 0 0 .2em;
         padding: .5em;
         text-align: center;
         color: #fff;
-        background-color: #666;
-        font-size: 1.25em;
+        background-color: $color-purple;
+        font-size: 1.125em;
+        border-radius: 5px;
     }
     ul {
         margin: 0;
         padding: 0;
         list-style-type: none;
         li {
-            margin: 0 0 5px;
-            padding: 0 0 5px;
+            margin: 0;
+            padding: 5px 0;
             border-bottom: 1px solid #ccc;
             a {
                 display: block;
-                padding: 10px 0;
+                padding: 6px 0 6px 10px;
                 line-height: 1.4em;
                 font-size: .938em;
                 color: #333;
+                border-left: solid 6px $secondaryColor;
                 &:hover {
                     color: $aHover;
+                    border-left: solid 6px darken($secondaryColor, 6);
                 }
             }
         }

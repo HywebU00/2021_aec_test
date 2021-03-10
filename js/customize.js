@@ -1,5 +1,15 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    //fancybox
+    $('.fancybox').fancybox({
+      toolbar  : false,
+      smallBtn : true,
+      iframe : {
+        preload : false
+    }
+})
+
+
     // 首頁輪播
     $('.mpSlider').slick({
         mobileFirst: true,
@@ -97,7 +107,7 @@ $(function() {
         lazy: true
     });
     // 
-$('.cppic_slider').slick({
+    $('.cppic_slider').slick({
         dots: true,
         infinite: false,
         speed: 500,
@@ -138,11 +148,11 @@ $('.cppic_slider').slick({
     });
 
      // cp_photo
-    $('.Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
+     $('.Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
         $('.controls').html(i + '/' + slick.slideCount);
     });
-    $('.Slider-for').slick({
+     $('.Slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
@@ -153,7 +163,7 @@ $('.cppic_slider').slick({
         asNavFor: '.Slider-nav',
         infinite: true
     });
-    $('.Slider-nav').slick({
+     $('.Slider-nav').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
         asNavFor: '.Slider-for',
@@ -163,5 +173,18 @@ $('.cppic_slider').slick({
         focusOnSelect: true,
         infinite: true
     });
-    
-});
+
+ });
+
+//openlink
+$(function() {
+    $('.table_list .openlink').click(function() {
+        $(this).parents('tr').siblings('tr').find('.second_data').stop().slideUp();
+        $(this).parents('tr').next('tr').find('.second_data').stop().slideToggle();
+    })
+    $('.closelink').click(function(){
+        $('.second_data').stop().slideUp();
+    })
+})
+
+

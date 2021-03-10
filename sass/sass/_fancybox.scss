@@ -1,0 +1,74 @@
+.fancybox-slide--iframe .fancybox-content {
+	width  : 800px;
+	height: auto;
+	min-height: 450px;
+	// height : 600px;
+	max-width  : 80%;
+	max-height : 80%;
+	margin: 0;
+	// background: #191919;
+	@include screen('mobile') {
+		min-height: 450px;
+		max-height : 80%;
+	}
+}
+.popup{
+	clear: both;
+	background: #fff;
+	margin:0;
+	padding: 1em;
+	line-height: 1.8em;
+	table{
+		background: #fff;
+	}
+	h2{
+		background: #a9a8ea;
+		margin: 0 0 .5em;
+		padding: .5em;
+		text-align: center;
+		font-size: 1.25em;
+	}
+	h3{
+		margin: 0;
+		padding:0;
+		font-size: 1em;
+	}
+	.num{
+		text-align: center;
+		@include screen('mobile') {
+			text-align: left;
+		}
+	}
+	.reply_table{
+		th{
+			width: 50%;
+		}
+	}
+	ul{
+		margin: 0;
+	}
+	.remark{
+		margin: 1em 0;
+		border-left: solid 5px $secondaryColor;
+		padding: 10px 10px 10px 20px;
+		background: #f1f7e8;
+		font-size: .938em;
+		ol{
+			margin: 0 0 0 20px!important;
+			padding:0!important;
+		}
+	}
+	.account-check{
+		margin: 1em 0;
+		border-left: solid 5px $importantColor;
+		color: $importantColor;
+		padding: 10px 10px 10px 20px;
+		background: #fbeef3;
+		font-size: 1.125em;
+		font-weight: bold;
+		p{
+			margin: .5em 0;
+		}
+
+	}
+}
