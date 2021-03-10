@@ -20,13 +20,15 @@
         border: none;
         width: 30px;
         height: 62px;
-        background: rgba(255,255,255, 0);
+        background: rgba(255,255,255, .5);
         position: absolute;
         right: 1%;
         z-index: 90;
         text-indent: -9999px;
         border-radius: 4px;
         padding: 0;
+        box-shadow: 0 3px 5px 1px $primaryColor;
+        min-width: 36px;
         &:before {
             content: "";
             position: absolute;
@@ -90,7 +92,7 @@
                     right:0;
                 }
                 &:last-child{
-                   &:before{
+                 &:before{
                     display: none;
                 } 
             }

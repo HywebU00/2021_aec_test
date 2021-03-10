@@ -60,19 +60,30 @@ body {
         width: 220px;
         margin-right: 30px;
         @include screen('tablet') {
-          display: none;
+          // display: none;
+        }
+        @include screen('mobile') {
+          float: none;
+          flex:1 1 auto;
+          max-width: 100%;
+          width: 100%;
+          flex-wrap:wrap;
         }
       }
       .center_block {
        flex:auto;
        max-width: 100%;
        overflow: hidden;
-     }
-     &.small_size {
+       @include screen('mobile') {
+        display: block;
+        overflow: visible;
+      }
+    }
+    &.small_size {
       font-size: .938em;
     }
     &.large_size {
-      font-size: 1.125em;
+      font-size: 1.25em;
     }
     .contentpage{
       margin-top: -140px;
@@ -220,7 +231,7 @@ body {
   margin-bottom: 1em;
   clear: both;
   @include screen('mobile') {
-    padding: 0;
+    padding:10px 0 0 0;
   }
   .form_grid .form_grp{
     border-bottom: 1px dashed rgba(255, 255, 255, .5);

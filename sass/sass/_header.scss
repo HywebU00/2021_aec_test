@@ -4,6 +4,9 @@
     z-index: 99;
     background: #FFF;
     box-shadow: 0px 2px 5px RGBA(0, 0, 0, 0.1);
+    @include screen('mobile') {
+        position: fixed;
+    }
     // 虛擬底色 - navigation bg
     &:before {
         content: "";

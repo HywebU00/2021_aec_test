@@ -182,7 +182,22 @@
     margin-top: -2em;
     color:$importantColor;
 }
+.openlink{
+    display: block;
+    position: relative;
+    padding-left: 1.2em;
+    img{
+        vertical-align: middle;
+        height: 1em;
+        width:1em;
+        position: absolute;
+        left:0;
+        top:.15em;
+    }
 }
+
+}
+
 .second_data {
     position: relative;
     // background: #ecfce1;
@@ -213,6 +228,7 @@
         border-right: none;
         border-left: none;
     }
+
     .closelink {
         position: absolute;
         right: 10px;

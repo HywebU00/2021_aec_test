@@ -1,15 +1,5 @@
 // 自行加入的JS請寫在這裡
 $(function() {
-    //fancybox
-    $('.fancybox').fancybox({
-      toolbar  : false,
-      smallBtn : true,
-      iframe : {
-        preload : false
-    }
-})
-
-
     // 首頁輪播
     $('.mpSlider').slick({
         mobileFirst: true,
@@ -174,17 +164,24 @@ $(function() {
         infinite: true
     });
 
- });
-
-//openlink
-$(function() {
-    $('.table_list .openlink').click(function() {
-        $(this).parents('tr').siblings('tr').find('.second_data').stop().slideUp();
-        $(this).parents('tr').next('tr').find('.second_data').stop().slideToggle();
+    //fancybox
+    $('.fancybox').fancybox({
+        toolbar  : false,
+        smallBtn : true,
+        iframe : {
+            preload : false
+        }
     })
-    $('.closelink').click(function(){
-        $('.second_data').stop().slideUp();
+
+    //openlink
+    $(function() {
+        $('.table_list .openlink').click(function() {
+            $(this).parents('tr').siblings('tr').find('.second_data').stop().slideUp();
+            $(this).parents('tr').next('tr').find('.second_data').stop().slideToggle();
+        })
+        $('.closelink').click(function(){
+            $('.second_data').stop().slideUp();
+        })
     })
-})
 
-
+});

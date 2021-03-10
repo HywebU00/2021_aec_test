@@ -6,12 +6,13 @@
         font-size: .875em;
         color: #222;
         padding-top: .3em;
+        white-space: nowrap;
     }
     ul {
-       @include li-reset;
-       display: flex;
-       flex: 0 0 6em;
-       li {
+     @include li-reset;
+     display: flex;
+     flex: 0 0 6em;
+     li {
         font-size: 1em;
         flex:0 0 auto;
         margin: 2px;
@@ -47,6 +48,6 @@
     }
 }
 @include screen('mobile') {
-    display: none;
+    // display: none;
 }
 }
