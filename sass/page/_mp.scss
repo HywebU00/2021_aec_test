@@ -68,8 +68,8 @@
     background-size: cover;
     height: 310px;
     @include screen('mobile') {
-     margin-top: 40px; 
- }
+       margin-top: 40px; 
+   }
 }
 .quiz{
     margin-top: -260px;
@@ -233,7 +233,7 @@
 }
 
 .news{
-   @include screen('mobile') {
+ @include screen('mobile') {
     padding-top:120px;
 }
 
@@ -261,13 +261,13 @@ h2{
     }
 }
 .container{
-   background: #fff;
-   box-shadow:0 0 10px 1px rgba(135, 135, 135, .3);
-   margin: 1.5em auto 1em;
-   padding: 2em 4em 1.5em;
-   position: relative;
+ background: #fff;
+ box-shadow:0 0 10px 1px rgba(135, 135, 135, .3);
+ margin: 1.5em auto 1em;
+ padding: 2em 4em 1.5em;
+ position: relative;
 
-   &:before{
+ &:before{
     content:'';
     width: 383px;
     height: 205px;
@@ -460,12 +460,12 @@ h2{
         }
     }
     .container{
-       background: #fff;
-       box-shadow:0 0 10px 1px rgba(135, 135, 135, .3);
-       margin: 1.5em auto 1em;
-       padding: 2em 4em 1.5em;
-       position: relative;
-       &:before{
+     background: #fff;
+     box-shadow:0 0 10px 1px rgba(135, 135, 135, .3);
+     margin: 1.5em auto 1em;
+     padding: 2em 4em 1.5em;
+     position: relative;
+     &:before{
         content:'';
         width: 286px;
         height: 118px;
