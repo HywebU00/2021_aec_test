@@ -90,12 +90,13 @@
         }
     }
     h1 {
-        float: left;
         width: 460px;
         height: 110px;
         margin: -80px 0 0 0;
         padding: 0;
         box-sizing: border-box;
+        position: relative;
+        z-index: 9999;
         a {
             display: inline-block;
         }
@@ -105,16 +106,16 @@
             max-height: 96px;
         }
         @include screen('mobile') {
-            float: none;
-            margin: 0px 0 0 0;
-            padding: 2px 60px;
-            width: 100%;
-            text-align: center;
-            height: 60px;
+            // position: static;
+            margin: 0;
+            padding: 2px 0 2px 60px;
+            text-align: left;
+            height: 70px;
+
             img {
                 width: auto;
                 height: auto;
-                max-height: 54px;
+                max-height: 60px;
                 margin: 0px auto;
                 transform: scale(.8);
             }

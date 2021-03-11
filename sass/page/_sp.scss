@@ -38,6 +38,8 @@
 	position: relative;
 	height: 38px;
 	margin-bottom: 1em;
+	-webkit-line-height: 2em;
+	-ms-line-height: 1.9em;
 	line-height: 2em;
 	&:before{
 		content:'';

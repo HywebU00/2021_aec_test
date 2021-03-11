@@ -68,8 +68,8 @@
     background-size: cover;
     height: 310px;
     @include screen('mobile') {
-       margin-top: 40px; 
-   }
+     margin-top: 40px; 
+ }
 }
 .quiz{
     margin-top: -260px;
@@ -233,7 +233,7 @@
 }
 
 .news{
- @include screen('mobile') {
+   @include screen('mobile') {
     padding-top:120px;
 }
 
@@ -261,13 +261,13 @@ h2{
     }
 }
 .container{
- background: #fff;
- box-shadow:0 0 10px 1px rgba(135, 135, 135, .3);
- margin: 1.5em auto 1em;
- padding: 2em 4em 1.5em;
- position: relative;
+   background: #fff;
+   box-shadow:0 0 10px 1px rgba(135, 135, 135, .3);
+   margin: 1.5em auto 1em;
+   padding: 2em 4em 1.5em;
+   position: relative;
 
- &:before{
+   &:before{
     content:'';
     width: 383px;
     height: 205px;
@@ -299,83 +299,107 @@ h2{
         padding:.5em .3em .4em;
         border-bottom: 1px solid $color-gray;
         position: relative;
+        @include screen('mobile') {
+         padding:.4em .3em 1em; 
+     }
 
-        &:after{
-            content: "";
+     &:after{
+        content: "";
+        position: absolute;
+        bottom:-2px;
+        left:0;
+        width: 6.3em;
+        height: 3px;
+        background-color:$color-purple;
+    }
+}
+
+.activity_date{
+    float: left;
+    position: relative;
+    @include screen('mobile') {
+        border-radius:.31em;
+    }
+    .day{
+        display: inline-block;
+        font-weight: bold;
+        color: #4141af;
+        padding:.5em 0;
+        @include screen('mobile') {
+            margin-top: 2em;
+        }
+    }
+    .tag1{
+        background: $color-green;
+        color: $color-white;
+        font-weight: bold;
+        padding: .1em .5em;
+        border-radius: 3px;
+        font-size: .875em;
+        margin: 0 .5em 0 1em;
+        @include screen('mobile') {
             position: absolute;
-            bottom:-2px;
             left:0;
-            width: 6.3em;
-            height: 3px;
-            background-color:$color-purple;
+            top:.55em;
+            margin: 0;
+            width: 100%;
+            text-align: center;
         }
     }
-
-    .activity_date{
-        float: left;
-        position: relative;
+    .tag2{
+        background: $color-purple;
+        color: $color-white;
+        font-weight: bold;
+        padding: .1em .5em;
+        border-radius: 3px;
+        font-size: .875em;
+        margin: 0 .5em 0 1em;
         @include screen('mobile') {
-            border-radius:.31em;
-        }
-        .day{
-            display: inline-block;
-            font-weight: bold;
-            color: #4141af;
-            padding:.5em 0;
-        }
-        .tag1{
-            background: $color-green;
-            color: $color-white;
-            font-weight: bold;
-            padding: .1em .5em;
-            border-radius: 3px;
-            font-size: .875em;
-            margin: 0 .5em 0 1em;
-        }
-        .tag2{
-            background: $color-purple;
-            color: $color-white;
-            font-weight: bold;
-            padding: .1em .5em;
-            border-radius: 3px;
-            font-size: .875em;
-            margin: 0 .5em 0 1em;
-        }
-    }
-    .activity_info{
-        margin-left: 150px;
-        @include screen('mobile') {
-            margin-left: 150px;
-        }
-        a{
-            display: block;
-        }
-        .activity_title{
-            color: $color-word;
-            font-weight: bold;
-            font-size: 1.125em;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            transition: all .2s;
-            padding:.5em 40px .5em 0;
-            position: relative;
-            &:hover{
-                color: darken($primaryColor, 5);
-            }
-            @include screen('mobile') {
-                margin-right: 0;
-                white-space: normal;
-                max-height: 4.5em;
-                padding:.5em 30px .5em 0;
-            }
-        }
-        .newicon{
             position: absolute;
-            top:0;
-            right:0;
+            left:0;
+            top:.55em;
+            margin: 0;
+            width: 100%;
+            text-align: center;
         }
     }
+}
+.activity_info{
+    margin-left: 150px;
+    @include screen('mobile') {
+        margin-left: 100px;
+    }
+    a{
+        display: block;
+    }
+    .activity_title{
+        color: $color-word;
+        font-weight: bold;
+        font-size: 1.125em;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: all .2s;
+        padding:.5em 40px .5em 0;
+        position: relative;
+        &:hover{
+            color: darken($primaryColor, 5);
+        }
+        @include screen('mobile') {
+            margin-right: 0;
+            white-space: normal;
+            max-height: 3.2em;
+            padding:.5em 30px .5em 0;
+            line-height: 1.5em;
+
+        }
+    }
+    .newicon{
+        position: absolute;
+        top:0;
+        right:0;
+    }
+}
 
 
 }
@@ -460,12 +484,12 @@ h2{
         }
     }
     .container{
-     background: #fff;
-     box-shadow:0 0 10px 1px rgba(135, 135, 135, .3);
-     margin: 1.5em auto 1em;
-     padding: 2em 4em 1.5em;
-     position: relative;
-     &:before{
+       background: #fff;
+       box-shadow:0 0 10px 1px rgba(135, 135, 135, .3);
+       margin: 1.5em auto 1em;
+       padding: 2em 4em 1.5em;
+       position: relative;
+       &:before{
         content:'';
         width: 286px;
         height: 118px;
