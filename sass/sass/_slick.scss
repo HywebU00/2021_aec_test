@@ -313,9 +313,9 @@
     }
     // dots
     .slick-dots {
-        bottom: -30px !important;
+        bottom: -60px !important;
         @include screen('mobile') {
-            bottom: -40px !important;
+            bottom: -60px !important;
             padding: 0;
         }
         li {
@@ -326,10 +326,12 @@
     }
     //Arrows
     .slick-prev {
-        left: -1 * $grid-gutter-width/2;
+        // left: -1 * $grid-gutter-width/2;
+        left:-10px;
     }
     .slick-next {
-        right: -1 * $grid-gutter-width/2;
+        // right: -1 * $grid-gutter-width/2;
+        right:-11px;
     }
     a {
         color: #555;
