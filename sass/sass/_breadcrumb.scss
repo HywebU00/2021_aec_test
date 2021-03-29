@@ -1,10 +1,10 @@
 .breadcrumb {
     // border-bottom: 1px solid #EEE;
     padding: .1em 0em .1em 25px;
-    font-size: .875em;
+    font-size: 1em;
     font-weight: bold;
     margin: 0px auto 5px;
-    color:#00c894;
+    color:$color-green;
     position: relative;
     ul {
         @include li-reset;

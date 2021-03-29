@@ -14,10 +14,10 @@
         border: 1px solid #CCC;
         padding: .4em 1em;
         display: block;
-        color: #333;
+        color: #fff;
         box-sizing: border-box;
         border-radius:4px;
-        background: #d4f5bd;
+        background: $color-green;
         &:hover,
         &:focus {
             color: #FFF;

@@ -24,7 +24,7 @@ h1.title, h2.title {
     right:50%;
     margin-right: -2em;
     bottom: -.5em;
-    background: $color-green;
+    background: $color-green2;
   }
 }
 // .tt{ color: #222; }
@@ -88,6 +88,16 @@ h1.title, h2.title {
   a {
     @include aSetting;
   }
+
+
+  &.small_size {
+    font-size: .938em;
+  }
+  &.large_size {
+    font-size: 1.25em;
+  }
+
+
 }
 
 // 檔案下載
